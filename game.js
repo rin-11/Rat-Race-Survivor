@@ -1,6 +1,7 @@
 
 import { Player } from './player.js';
 import { UserInput } from './input.js';
+import { Background } from './backgrounds.js';
 
 
 // put all JS inside callback function LOAD event 
@@ -17,6 +18,10 @@ window.addEventListener('load', function(){
         constructor(width, height){
             this.width = width;
             this.height = height;
+
+            // background speed and class
+            this.speed = 3;
+            this.background = new Background(this);
             
             // import player class 
             this.player = new Player(this);
@@ -25,16 +30,17 @@ window.addEventListener('load', function(){
             this.input = new UserInput(); 
         }
         update(){
+            this.background.update();
             this.player.update(this.input.keys); // add key input as argument
         }
         draw(context){
+            this.background.draw(context);
             this.player.draw(context);
         }
     }
     //create an instance of game class -- trigger class constructor game which triggers new player
     const game = new Game(canvas.width, canvas.height); 
     console.log(game);
-    // let lastTime = 0;
 
     // add animation loop so game updates/draws 60 times per second
     function animate(){

@@ -9,15 +9,15 @@ body {
 
 .header {
     text-align: center;
-    font-size: 35px;
+    font-size: 60px;
     color:gold;
+    text-shadow: 2px 2px 2px black;
     margin: 5px;
     padding: 0px;
     font-family: 'SmackBoom';
 }
 
 #streetcanvas {
-    background-color: white;
     border: 5px solid gold;
     position: absolute;
     top: 50%;
@@ -27,7 +27,7 @@ body {
     max-height: 100%;
 }
 
-#player {
+#player, #layer1, #layer2, #layer3 {
     display:none;
 }
 
