@@ -1,5 +1,6 @@
 
 import { Player } from './player.js';
+import { Cat, Poison, Trap } from './enemies.js';
 import { UserInput } from './input.js';
 import { Background } from './backgrounds.js';
 
@@ -28,14 +29,46 @@ window.addEventListener('load', function(){
             
             // keys pressed log in console
             this.input = new UserInput(); 
+
+            // enemies array
+            this.enemies = [];
+
+            // timer for adding enemies
+            this.enemyTimer = 0; // time starts at 0
+            this.enemyInterval = 500; // time to add new enemy
+
+
         }
         update(){
             this.background.update();
             this.player.update(this.input.keys); // add key input as argument
+            
+            //enemies timer 
+            if(this.enemyTimer > this.enemyInterval){
+                this.addEnemy();
+                // reset timer back to 0 once enemy is added
+                this.enemyTimer = 0;
+            } else {
+                this.enemyTimer += 1;
+            }
+            this.enemies.forEach(enemy => {
+                enemy.update();
+            })
+        
         }
         draw(context){
             this.background.draw(context);
             this.player.draw(context);
+            this.enemies.forEach(enemy => {
+                enemy.draw(context);
+            });
+        }
+
+        // method for enemy movements
+        addEnemy(){
+            // push method from enemies array
+            this.enemies.push(new Cat(this));
+            console.log(this.enemies);
         }
     }
     //create an instance of game class -- trigger class constructor game which triggers new player

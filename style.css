@@ -6,8 +6,8 @@
 body {
     background-color:black;
     background-image: url('assets/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-repeat: no-repeat; */
 }
 
 .header {
@@ -31,13 +31,13 @@ body {
     max-height: 100%;
 }
 
-#player, #layer1, #layer2, #layer3 {
+#player, #enemy1Cat, #enemy2Poison, #enemy3Trap, #food, #layer1, #layer2, #layer3 {
     display:none;
 }
 
-#layer1, #layer2, #layer3 img {
+/* #layer1, #layer2, #layer3 img {
     background-repeat: repeat-x;
-}
+} */
 
 .health {
     position: relative;
@@ -46,7 +46,7 @@ body {
     background-color:bisque;
     border-radius: 5px;
     overflow: hidden;
-    top: 435px;
+    top: 500px;
     left: 125px;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .progresstext {
-    position: absolute;
+    position: absolute; 
     top: 50%;
     right: 5px;
     transform: translateY(-50%);
@@ -66,7 +66,7 @@ body {
 }
 
 #music {
-    position:fixed;
+    position:relative;
     top:160px;
     left:130px;
     background-color: gold;
