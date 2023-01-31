@@ -1,11 +1,24 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: 'SmackBoom';
+    src: url("assets/smack_boom/Smack Boom.ttf")
+}
+
+body {
+    background-image: url('assets/background.jpg');
+}
+
+.header {
+    text-align: center;
+    font-size: 50px;
+    color:gold;
+    margin: 5px;
+    padding: 0px;
+    font-family: 'SmackBoom';
 }
 
 #streetcanvas {
-    border: 5px solid black;
+    background-color: white;
+    border: 5px solid gold;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -16,6 +29,19 @@
 
 #player {
     display:none;
+}
+
+.health {
+    background-color: gold;
+    position: relative;
+    top: 500px;
+    left: 400px;
+}
+
+#music {
+    position: absolute;
+    top: 80%;
+    left: 70%;
 }
 
 
