@@ -11,7 +11,7 @@ import { Background } from './backgrounds.js';
 window.addEventListener('load', function(){
     const canvas = document.getElementById('streetcanvas');
     const ctx = canvas.getContext('2d');
-    canvas.width = 1500;
+    canvas.width = 1200;
     canvas.height = 500;
 
     class Game {
