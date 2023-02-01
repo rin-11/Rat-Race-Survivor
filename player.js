@@ -8,7 +8,7 @@ export class Player {
 
         // player size
         this.width = 150;
-        this.height = 200;
+        this.height = 100;
 
         // player position
         this.x = 0;
@@ -28,7 +28,7 @@ export class Player {
     }
 
     update(input){ 
-
+        this.collision();
         // horizontal movements
         this.x += this.speed;
         // if(userinput.includes('ArrowRight')) this.x++;
@@ -42,7 +42,7 @@ export class Player {
         if (this.x > this.game.width- this.width) this.x = this.game.width- this.width;
 
         // vertical movement
-        if (input.includes('ArrowUp') && this.onGround()) this.vy -= 20; 
+        if (input.includes('ArrowUp') && this.onGround()) this.vy -= 25; 
         this.y += this.vy; 
         // use weight to bring player back from jump
         if (!this.onGround()) this.vy += this.weight;
@@ -51,35 +51,32 @@ export class Player {
     }
 
     draw(context){ // context is an argument to specify which canvas element we want to draw on 
+        // .strokeRect = canvas 2D method to draw rectangle outline
+        if(this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
         context.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
     
     onGround(){ 
         return this.y >= this.game.height - this.height;
     }
+    collision(){
+        this.game.characters.forEach(character => {
+            // collision 
+
+            // set different hit point value for each character
+            
+                        // horizontal check
+            if( character.x < this.x + this.width &&
+                character.x + character.width > this.x &&
+                        // vertical check
+                character.y < this.y + this.height &&
+                character.y + character.height > this.y
+            ){ // minus health points
+               this.game.health --;
+               // further develop this by creating an array for enemies with different
+               // hitpoint values and subtract based on which collision
+            } else {
+            }
+         });
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

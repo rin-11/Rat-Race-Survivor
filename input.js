@@ -1,7 +1,8 @@
 // capture and keep track of user input
 
 export class UserInput {
-    constructor(){
+    constructor(game){
+        this.game = game;
         this.keys = [];
         window.addEventListener('keydown', e => {
             console.log(e.key, this.keys);
@@ -14,8 +15,10 @@ export class UserInput {
                     e.key === 'ArrowRight')
             && this.keys.indexOf(e.key) === -1){
                 this.keys.push(e.key);
-            }
-            console.log(e.key, this.keys);
+                // collision detection
+            } else if (e.key === 'd') this.game.debug = !this.game.debug;
+    
+            // console.log(e.key, this.keys);
         });
         window.addEventListener('keyup', e => {
             if (    e.key === 'ArrowUp'   ||

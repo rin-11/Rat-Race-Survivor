@@ -6,9 +6,10 @@
 body {
     background-color:black;
     background-image: url('assets/background.jpg');
-    background-size: 100%;
-    /* background-repeat: no-repeat; */
+    background-image: -moz-element(url('assets/background.jpg'));
+    background-repeat: no-repeat;
 }
+
 
 .header {
     text-align: center;
@@ -35,43 +36,15 @@ body {
     display:none;
 }
 
-/* #layer1, #layer2, #layer3 img {
-    background-repeat: repeat-x;
-} */
-
-.health {
-    position: relative;
-    width: 200px;
-    height: 30px;
-    background-color:bisque;
-    border-radius: 5px;
-    overflow: hidden;
-    top: 500px;
-    left: 125px;
-}
-
-.progressfill {
-    width: 100%;
-    height: 100%;
-    background-color: gold;
-}
-
-.progresstext {
-    position: absolute; 
-    top: 50%;
-    right: 5px;
-    transform: translateY(-50%);
-    font:bold 14px;
-    font-family: 'SmackBoom';
-}
 
 #music {
-    position:relative;
-    top:160px;
-    left:130px;
     background-color: gold;
     border-radius: 5px;
-}
+    margin: 50px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+} 
 
 
 
