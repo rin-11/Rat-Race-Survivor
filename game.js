@@ -66,8 +66,13 @@ window.addEventListener('load', function(){
 
         // method for enemy movements
         addEnemy(){
+             // only add posion when the player is moving
+             if (this.speed > 0) this.enemies.push(new Poison(this));
+
             // push method from enemies array
             this.enemies.push(new Cat(this));
+            this.enemies.push(new Trap(this));
+
             console.log(this.enemies);
         }
     }

@@ -6,8 +6,8 @@ class Enemy {
     // move enemy around
     update(){ 
         // enemy movement- decrease x coordinate by speed property
-        this.x -= this.speedX;
-        // this.y -= this.speedY // use this for enemies moving vertical
+        // this.x -= this.speedX;
+        // this.y --;
     }
 
     // draw image
@@ -35,24 +35,69 @@ export class Cat extends Enemy {
         this.y= 300; // same y coordinate as rat player
 
         //speed
-        this.speedX= 3;
-        // this.speedY= 0; // use this for enemies moving vertical
+        this.speedX= 4;
+        // this.speedY= 0;
 
         // grab image element
         this.image= document.getElementById('enemy1Cat');
     }
     update(){
         super.update();
-
+        this.x -= this.speedX;
     }
 }
 
 export class Poison extends Enemy {
+        constructor(game){
+            // super keyword is used to access and call functions of an object's parent
+            super();
+            this.game = game;
+            
+            // posion size
+            this.width = 500;
+            this.height = 600;
+            
+            // starting coordinates
+            this.x= Math.random() * this.game.width * 0.5; // -- have poison move vertically and come in at random x location
+            this.y= 0 - this.game.height; // scale down from top of canvas
+            
+            //speed
+            this.speedY= 2;
+            
+            // grab image element
+            this.image= document.getElementById('enemy2Poison');
+                }
+            update(){
+                super.update();
+                this.y += this.speedY;
+         }       
     
-}
+    }
 
 export class Trap extends Enemy {
-
+    constructor(game){
+        // super keyword is used to access and call functions of an object's parent
+                super();
+                this.game = game;
+        
+                // trap size
+                this.width = 400;
+                this.height = 250;
+        
+                // starting coordinates
+                this.x= this.game.width; //start from edge of canvas
+                this.y= 250; 
+        
+                //speed
+                this.speedX= 2;
+        
+                // grab image element
+                this.image= document.getElementById('enemy3Trap');
+            }
+            update(){
+                super.update();
+                this.x -= this.speedX;
+            }
 }
 
 
