@@ -3,6 +3,13 @@
     src: url("assets/smack_boom/Smack Boom.ttf")
 }
 
+* { 
+/* global reset --> same across different browsers */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color:black;
     background-image: url('assets/background.jpg');
@@ -11,18 +18,71 @@ body {
 }
 
 
+#rat {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: 500px;
+    height: 375px;
+}
+
+#Cat {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: 200px;
+    height: 250px;
+}
+#Trap {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: 120px;
+    height: 50px;
+}
+#Food {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: 100px;
+    height: 100px;
+}
+#Poison {
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: 75px;
+    height: 150px;
+}
+
+
 .header {
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
     color:gold;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px rgb(87, 88, 82);
     margin: 0px 0px 0px 0px;
     top: 0px;
     padding: 5px;
     font-family: 'SmackBoom';
 }
 
-#streetcanvas {
+#gamecanvas {
     border: 5px solid gold;
     position: absolute;
     top: 50%;
@@ -37,13 +97,28 @@ body {
 }
 
 
+button {
+    font-family: 'SmackBoom';
+    color: gold;
+    background-color: rgba(255, 253, 245, 0.394);
+    border: 10px solid gold;
+    border-radius: 5px;
+    margin: 50px;
+    padding: 10px;
+    position: fixed;
+    bottom: 11%;
+    left: 72%;
+    font-size: 30px;;
+}
+
 #music {
     background-color: gold;
     border-radius: 5px;
     margin: 50px;
     padding: 10px;
     position: fixed;
-    bottom: 0;
+    bottom: 3%;
+    left: 67%;
 } 
 
 

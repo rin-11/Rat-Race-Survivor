@@ -1,7 +1,8 @@
 
-// create player class to draw character
+// player class for main character who will move with keys pressed
+// ---------------------------------------------------------------------------------------------
 export class Player {
-    constructor(game){ //game object as an argument
+    constructor(game){ 
 
         // point to the game object
         this.game = game;
@@ -10,9 +11,9 @@ export class Player {
         this.width = 150;
         this.height = 100;
 
-        // player position
+        // player starting position
         this.x = 0;
-        this.y = this.game.height - this.height;
+        this.y = this.game.height - this.height; // bottom of canvas
 
         // vertical speed
         this.vy = 0;
@@ -27,7 +28,9 @@ export class Player {
         this.maxSpeed = 10;
     }
 
-    update(input){ 
+// ---------------------------------------------------------------------------------------------
+// update method to link to user input keys module
+    update(input){  
         this.collision();
         // horizontal movements
         this.x += this.speed;
@@ -50,10 +53,11 @@ export class Player {
         else this.vy = 0;
     }
 
-    draw(context){ // context is an argument to specify which canvas element we want to draw on 
+    // draw method for player image
+    draw(context){ // context is an argument to point to game canvas
         // .strokeRect = canvas 2D method to draw rectangle outline
         if(this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
-        context.drawImage(this.image, this.x, this.y, this.width, this.height);
+        context.drawImage(this.image, this.x, this.y, this.width, this.height); //(image, player starting position, player size)
     }
     
     onGround(){ 
@@ -72,7 +76,7 @@ export class Player {
                 character.y < this.y + this.height &&
                 character.y + character.height > this.y
             ){ // minus health points
-               this.game.health --;
+            //    this.game.health + this.game.character.hitPoints;
                // further develop this by creating an array for enemies with different
                // hitpoint values and subtract based on which collision
             } else {

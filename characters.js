@@ -1,6 +1,6 @@
 // Character Parent Class -- properties/methods for all three enemies
 class Character {
-    constructor(){ //game object as an argument
+    constructor(){ 
 
     }
     // move character around
@@ -40,8 +40,13 @@ export class Cat extends Character {
         this.speedX= 4;
         // this.speedY= 0;
 
+        //hitPoints
+        // this.hitPoints = -10;
+
         // grab image element
         this.image= document.getElementById('enemy1Cat');
+
+
     }
     update(){
         super.update();
@@ -65,10 +70,18 @@ export class Poison extends Character {
             
             //speed
             this.speedY= 2;
+
+            //hitPoints
+            // this.hitPoints = -25;
+
             
             // grab image element
             this.image= document.getElementById('enemy2Poison');
-                }
+                
+
+
+               }
+
             update(){
                 super.update();
                 this.y += this.speedY;
@@ -92,9 +105,14 @@ export class Trap extends Character {
         
                 //speed
                 this.speedX= 2;
+
+                // this.hitPoints= -20;
         
                 // grab image element
                 this.image= document.getElementById('enemy3Trap');
+
+
+
             }
             update(){
                 super.update();
@@ -113,14 +131,20 @@ export class Cheese extends Character {
         
                 // starting coordinates
                 this.x= Math.random() * this.game.width * 0.5; //start from edge of canvas
-                this.y= Math.random() * this.game.height * 0.5;
+                this.y= this.game.height;
         
                 //speed
                 this.speedX= 2;
                 this.speedY= 2;
+
+                // this.hitPoints= 10;
+
         
                 // grab image element
                 this.image= document.getElementById('food');
+
+
+
             }
             update(){
                 super.update();
