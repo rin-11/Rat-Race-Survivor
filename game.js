@@ -1,10 +1,14 @@
 
 // TO DO
-//     create instructions page and play button
-//     setInterval for length of game to win
-//     create hitpoints for each character and set min/max for health score
-//     create gameOver() for when health hits 0
-//     add collision sound effects/graphics
+//     *create instructions box on startgame.html
+//     *setInterval for length of game to win
+//     * add timer to canvas
+//     change health score to health progress bar
+//     *create hitpoints for each character and set min/max for health score
+//     *create gameOver() for when health hits 0 & setInterval for length of game to win
+//     bonus: 
+            // add collision sound effects/graphics
+            // make instruction page images move
 
 // ------------------------------------------------------------------------------------
 
