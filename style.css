@@ -10,6 +10,76 @@
     box-sizing: border-box;
 }
 
+
+button {
+    background-color:darkorange;
+	border: 0;
+    margin: 10px;
+    padding: 10px;
+	outline: none;
+	cursor: pointer;
+	font-size: 32px;
+	font-weight: 500;
+	border-radius: 30px;
+	align-items:baseline;
+	justify-content: center;
+	font-family:'SmackBoom' ;
+	color:gold ;
+    width: 400px;
+    position: fixed;
+    bottom: 72%;
+    left: 5%;
+    font-size: 50px;;
+}
+
+/* 
+#instructionbtn {
+	padding: 10px 60px;
+	margin: 10px;
+	background-color:darkorange;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	font-size: 32px;
+	font-weight: 500;
+    width: 400px;
+	border-radius: 30px;
+	align-items:baseline;
+	justify-content: center;
+	font-family:'SmackBoom' ;
+	color:gold ;
+	position: fixed;
+    bottom: 55%;
+    left: 15%;
+}
+
+.popup {
+	width: 400px;
+	background-color: coral;
+	border-radius: 6px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 0 30px 30px;
+	color:floralwhite ;
+	font-size: 20px;
+	font-family:'SmackBoom' ;
+	font-weight: lighter;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+	visibility: visible;
+}
+
+.popup h2 {
+	text-align: center;
+	margin-top: 10px;
+} */
+
 body {
     background-color:black;
     background-image: url('assets/background.jpg');
@@ -20,8 +90,8 @@ body {
 
 #rat {
     position: absolute;
-    top: 50%;
-    left: 70%;
+    top: 34%;
+    left: 82%;
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
@@ -31,43 +101,34 @@ body {
 
 #Cat {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 45%;
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
-    width: 200px;
-    height: 250px;
+    width: 300px;
+    height: 350px;
 }
 #Trap {
     position: absolute;
-    top: 70%;
-    left: 45%;
+    top: 50%;
+    left: 15%;
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
-    width: 120px;
-    height: 50px;
+    width: 300px;
+    height: 200px;
 }
-#Food {
-    position: absolute;
-    top: 85%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 100%;
-    width: 100px;
-    height: 100px;
-}
+
 #Poison {
     position: absolute;
-    top: 55%;
-    left: 45%;
+    top: 35%;
+    left: 58%;
     transform: translate(-50%, -50%);
     max-width: 100%;
     max-height: 100%;
-    width: 75px;
-    height: 150px;
+    width: 150px;
+    height:300px;
 }
 
 
@@ -76,7 +137,7 @@ body {
     font-size: 50px;
     color:gold;
     text-shadow: 2px 2px 2px rgb(87, 88, 82);
-    margin: 0px 0px 0px 0px;
+    margin: 10px 10px 10px 10px;
     top: 0px;
     padding: 5px;
     font-family: 'SmackBoom';
@@ -97,19 +158,6 @@ body {
 }
 
 
-button {
-    font-family: 'SmackBoom';
-    color: gold;
-    background-color: rgba(255, 253, 245, 0.394);
-    border: 10px solid gold;
-    border-radius: 5px;
-    margin: 50px;
-    padding: 10px;
-    position: fixed;
-    bottom: 11%;
-    left: 72%;
-    font-size: 30px;;
-}
 
 #music {
     background-color: gold;
@@ -120,8 +168,33 @@ button {
     bottom: 3%;
     left: 67%;
 } 
+#music1 {
+    background-color: gold;
+    border-radius: 5px;
+    margin: 50px;
+    padding: 10px;
+    position: fixed;
+    bottom: 10%;
+    left: 1%;
+} 
 
-
+.instructions {
+    font-family: 'SmackBoom';
+    text-align: center;
+    color: gold;
+    border: 7px solid gold;
+    font-weight: lighter;
+    padding: 20px 20px;
+    font-size: 20px;
+    width: 1000px;
+    height: 300px;
+    position: fixed;
+    bottom: 5%;
+    left: 30%;
+}
+.instructionscontainer {
+    background-color: darkorange;
+}
 
 
 

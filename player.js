@@ -6,6 +6,8 @@ export class Player {
 
         // point to the game object
         this.game = game;
+        // this.health = this.game.health;
+        // this.hitpoints = this.game.hitpoints;
 
         // player size
         this.width = 150;
@@ -70,17 +72,23 @@ export class Player {
             // set different hit point value for each character
             
                         // horizontal check
-            if( character.x < this.x + this.width &&
-                character.x + character.width > this.x &&
-                        // vertical check
-                character.y < this.y + this.height &&
-                character.y + character.height > this.y
-            ){ // minus health points
+                        if( character.x < this.x + this.width &&
+                            character.x + character.width > this.x &&
+                                    // vertical check
+                            character.y < this.y + this.height &&
+                            character.y + character.height > this.y    
+                            )
+                                return this.game.score++/10
+                            {
+                                // character.markedForDeletion= true
+                                
+                            
+             // minus health points
             //    this.game.health + this.game.character.hitPoints;
                // further develop this by creating an array for enemies with different
                // hitpoint values and subtract based on which collision
-            } else {
-            }
+           
+            } 
          });
     }
 }
