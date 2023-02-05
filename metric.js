@@ -1,7 +1,7 @@
 export class HealthMetric {
     constructor(game){
         this.game = game;
-        this.fontSize = 40;
+        this.fontSize = 45;
         this.fontFamily = 'SmackBoom';
       
     };
