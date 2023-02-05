@@ -13,7 +13,7 @@
 // ------------------------------------------------------------------------------------
 
 import { Player } from './player.js';
-import { Cat, Poison, Trap, Cheese } from './characters.js';
+import { Cat, Poison, Trap } from './characters.js';
 import { UserInput } from './input.js';
 import { Background } from './backgrounds.js';
 import { HealthMetric } from './metric.js';
@@ -60,15 +60,23 @@ window.addEventListener('load', function(){
            
             
 
-            // collision detection
+            // rectangles around characters/player for collision detection
             this.debug = false;
 
-            // health property
-            this.health = 100;
+            // score property
+            // this.collision = 0;
+            this.score = 0;
+            this.scoremax = 500;
 
 
             // health bar design
             this.fontColor = 'gold';
+
+            // timer for win game
+            this.time = 0;
+            this.timemax = 1200000; // two minutes
+            this.endGame = false;
+           
 
         };
 
@@ -76,7 +84,10 @@ window.addEventListener('load', function(){
 
         // method for calculations and updating animations
         update(){ 
+            this.time += 300;
+            if(this.time > this.maxTime) this.endGame = true;
             this.background.update();
+            // this.player.update(this.input.keys);
             this.player.update(this.input.keys); // add key input as argument
             //enemies timer 
             if(this.characterTimer > this.characterInterval){
@@ -88,8 +99,21 @@ window.addEventListener('load', function(){
             }
             this.characters.forEach(character => {
                 character.update();
-            });     
-        };
+            });
+
+            // change alerts into pop up windows with play again button
+            
+            if (this.score > this.scoremax){
+                alert('GAME OVER! Want to try that again?')
+                reload();
+            }
+                if (this.time > this.timemax) {
+                alert('You did it! Want to try that again?')
+                reload();
+            }
+            // reload();
+        }
+    
 
 // ------------------------------------------------------------------------------------
 
@@ -115,7 +139,7 @@ window.addEventListener('load', function(){
             // push method from enemies array
             this.characters.push(new Cat(this));
             this.characters.push(new Trap(this));
-            this.characters.push(new Cheese(this));
+
 
             console.log(this.characters);
         }

@@ -119,39 +119,7 @@ export class Trap extends Character {
                 this.x -= this.speedX;
             }
 }
-export class Cheese extends Character {
-    constructor(game){
-        // super keyword is used to access and call functions of an object's parent
-                super();
-                this.game = game;
-        
-                // trap size
-                this.width = 100;
-                this.height = 50;
-        
-                // starting coordinates
-                this.x= Math.random() * this.game.width * 0.5; //start from edge of canvas
-                this.y= this.game.height;
-        
-                //speed
-                this.speedX= 2;
-                this.speedY= 2;
 
-                // this.hitPoints= 10;
-
-        
-                // grab image element
-                this.image= document.getElementById('food');
-
-
-
-            }
-            update(){
-                super.update();
-                this.x -= this.speedX;
-                this.y -= this.speedY;
-            }
-}
 
 // collision logic
 // set debugging mode when you press 'd' which sets a rectangle around player/character/food

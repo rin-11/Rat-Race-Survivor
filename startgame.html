@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Street Rat Runne</title>
+    <title>STREET RAT SIMULATOR</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="#">
 </head>
 <body>
     <div class="header">
-        <h1>STREET RAT RUNNER</h1>
+        <h1>STREET RAT SIMULATOR</h1>
     </div>
-
+    <canvas id="startgamecanvas"></canvas>
 <div class="container">
 
     <div class= "instructions"></div>
@@ -21,11 +21,17 @@
         <img id="Cat" src="assets/Cat.png" alt="cat">
         <img id="Poison" src="assets/Poison.png" alt="poison">>
         <img id="Trap" src="assets/Trap.png" alt="rattrap">
-    
-        <img id="Food" src="assets/Cheese.png" alt="cheese">
     </div>
-    
 
+    <div class = "instructionscontainer">
+<div class="instructions"> 
+        <!-- <button id="instructionbtn" onclick="openPopup()">How To Play</button>
+        <div class="popup" id="popup"> -->
+        <h2>These streets are tough for us rats. Welcome to the street rat simulator!</h2>
+        <p>Here you get to experience all the dangers of being a rat while you head on down to the subway, also known as rat paradise. It should only take you two minutes to get there. Make sure you look out for cats and rat traps by jumping over them. Humans like to throw poison at us too so that could come from anywhere. Even getting in close proximity of these items can negatively impact your score. It is vital you dodge all of the items the best you can. If you can make it to the subway in time without a score greater than 500 you are ready for the real rat world!</p>
+        <!-- <button id="closeinstructionbtn" onclick="closePopup()">Back to Game</button> -->
+    </div>
+</div>
 
 
 </div>
@@ -39,12 +45,12 @@
     Start Game
   </button>
 
-<audio id="music" autoplay controls loop>
+<audio id="music1" autoplay controls loop>
     <source src="assets/cyberpunk-street-files/music/cyberpunk-street.wav" type="audio/wav"> 
 </audio> 
-   
 
-    <script type= "module" src="game.js"></script>
+    <script type="module" src="game.js"></script>
+
 
 </body>
 </html>
