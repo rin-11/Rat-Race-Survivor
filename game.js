@@ -1,4 +1,3 @@
-
 // TO DO
 //     *create instructions box on startgame.html
 //     *setInterval for length of game to win
@@ -40,13 +39,13 @@ window.addEventListener('load', function(){
             // background speed and class
             this.speed = 3;
             this.background = new Background(this);
-            
+
             // import player class 
             this.player = new Player(this);
-            
+
             // keys pressed log in console
             this.input = new UserInput(this);
-            
+
             // health metric instantiate
             this.healthmetric = new HealthMetric(this);
 
@@ -57,18 +56,14 @@ window.addEventListener('load', function(){
             // timer for adding characters
             this.characterTimer = 0; // time starts at 0
             this.characterInterval = 500; // time to add new character
-           
-            
+
+
 
             // rectangles around characters/player for collision detection
             this.debug = false;
 
             // score property
-<<<<<<< HEAD
             // this.collision = 0;
-=======
-            this.collision = 0;
->>>>>>> 3d5fb61558778fccddcebcef23c6e27080d50e9c
             this.score = 0;
             this.scoremax = 500;
 
@@ -78,13 +73,9 @@ window.addEventListener('load', function(){
 
             // timer for win game
             this.time = 0;
-<<<<<<< HEAD
             this.timemax = 1200000; // two minutes
-=======
-            this.maxTime = 120000; // two minutes
->>>>>>> 3d5fb61558778fccddcebcef23c6e27080d50e9c
             this.endGame = false;
-           
+
 
         };
 
@@ -107,11 +98,10 @@ window.addEventListener('load', function(){
             }
             this.characters.forEach(character => {
                 character.update();
-<<<<<<< HEAD
             });
 
             // change alerts into pop up windows with play again button
-            
+
             if (this.score > this.scoremax){
                 alert('GAME OVER! Want to try that again?')
                 reload();
@@ -122,20 +112,7 @@ window.addEventListener('load', function(){
             }
             // reload();
         }
-=======
-            });  
-            if (this.score >= this.scoremax){
-                alert('GAME OVER! Want to try that again?')
-                reload();
-            
-                if ((this.time * 0.0001) === this.maxTime)
-                alert('You did it! Want to try that again?')
-                reload();
-            }}
-        
-           
->>>>>>> 3d5fb61558778fccddcebcef23c6e27080d50e9c
-    
+
 
 // ------------------------------------------------------------------------------------
 
@@ -199,22 +176,4 @@ window.addEventListener('load', function(){
     }
     animate();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
