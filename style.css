@@ -21,6 +21,7 @@ button {
 	outline: none;
 	cursor: pointer;
 	font-size: 25px;
+    letter-spacing: 5px;
 	border-radius: 30px;
 	justify-content: center;
 	font-family:'SmackBoom' ;
