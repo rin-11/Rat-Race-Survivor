@@ -21,64 +21,12 @@ button {
 	font-size: 32px;
 	font-weight: 500;
 	border-radius: 30px;
-	align-items:baseline;
 	justify-content: center;
 	font-family:'SmackBoom' ;
 	color:gold ;
-    width: 400px;
-    position: fixed;
-    bottom: 72%;
-    left: 5%;
-    font-size: 50px;;
+    font-size: 50px;
 }
 
-/* 
-#instructionbtn {
-	padding: 10px 60px;
-	margin: 10px;
-	background-color:darkorange;
-	border: 0;
-	outline: none;
-	cursor: pointer;
-	font-size: 32px;
-	font-weight: 500;
-    width: 400px;
-	border-radius: 30px;
-	align-items:baseline;
-	justify-content: center;
-	font-family:'SmackBoom' ;
-	color:gold ;
-	position: fixed;
-    bottom: 55%;
-    left: 15%;
-}
-
-.popup {
-	width: 400px;
-	background-color: coral;
-	border-radius: 6px;
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	padding: 0 30px 30px;
-	color:floralwhite ;
-	font-size: 20px;
-	font-family:'SmackBoom' ;
-	font-weight: lighter;
-	visibility: hidden;
-	transition: transform 0.4s, top 0.4s;
-}
-
-.open-popup{
-	visibility: visible;
-}
-
-.popup h2 {
-	text-align: center;
-	margin-top: 10px;
-} */
 
 body {
     background-color:black;
@@ -181,19 +129,75 @@ body {
 .instructions {
     font-family: 'SmackBoom';
     text-align: center;
-    color: gold;
-    border: 7px solid gold;
+    text-shadow: white;
+    color: rgb(89, 88, 81);
     font-weight: lighter;
     padding: 20px 20px;
     font-size: 20px;
-    width: 1000px;
-    height: 300px;
-    position: fixed;
-    bottom: 5%;
-    left: 30%;
 }
-.instructionscontainer {
-    background-color: darkorange;
+
+#start {
+	padding: 10px 60px;
+	margin: 10px;
+	background-color:darkorange;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	font-size: 32px;
+	font-weight: 500;
+	border-radius: 30px;
+	font-family: 'Bebas Neue', sans-serif;
+}
+
+#instructionbtn {
+	padding: 10px 60px;
+	margin: 10px;
+	background-color:darkorange;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	font-size: 32px;
+	font-weight: 500;
+	border-radius: 30px;
+	align-items:baseline;
+	justify-content: center;
+	font-family: 'Bebas Neue', sans-serif;
+}
+
+.popup {
+	width: 700px;
+	background-color: rgb(139, 94, 45);
+	border-radius: 5px;
+    justify-content: center;
+	position: absolute;
+	cursor: pointer;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 0 30px 30px;
+	color:floralwhite ;
+	font-size: 20px;
+	font-weight: lighter;
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+.homescreen button {
+	position: absolute;
+	top: 13%;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	left: 35%;
+	width: 400px;
+	max-height: fit-content;
+}
+
+.open-popup{
+	visibility: visible;
+}
+
+.popup h2 {
+	text-align: center;
+	margin-top: 10px;
 }
 
 

@@ -4,53 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STREET RAT SIMULATOR</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rat Race Survivor</title>
     <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1>STREET RAT SIMULATOR</h1>
-    </div>
-    <canvas id="startgamecanvas"></canvas>
-<div class="container">
-
-    <div class= "instructions"></div>
-    
-    <div class= "InstructionImgs">
-        <img id="Cat" src="assets/Cat.png" alt="cat">
-        <img id="Poison" src="assets/Poison.png" alt="poison">>
-        <img id="Trap" src="assets/Trap.png" alt="rattrap">
-    </div>
-
-    <div class = "instructionscontainer">
-<div class="instructions"> 
-        <!-- <button id="instructionbtn" onclick="openPopup()">How To Play</button>
-        <div class="popup" id="popup"> -->
-        <h2>These streets are tough for us rats. Welcome to the street rat simulator!</h2>
-        <p>Here you get to experience all the dangers of being a rat while you head on down to the subway, also known as rat paradise. It should only take you two minutes to get there. Make sure you look out for cats and rat traps by jumping over them. Humans like to throw poison at us too so that could come from anywhere. Even getting in close proximity of these items can negatively impact your score. It is vital you dodge all of the items the best you can. If you can make it to the subway in time without a score greater than 500 you are ready for the real rat world!</p>
-        <!-- <button id="closeinstructionbtn" onclick="closePopup()">Back to Game</button> -->
-    </div>
+<div class="header">
+    <h1>Rat Race Survivor</h1>
 </div>
 
-
+<button id="start" onclick="window.location.href='index.html';">Start Game</button>
 </div>
-
-<div class= "Rat">
-    <img id='rat' src="assets/Rat.png" alt="rat">
+<div class="instructions">
+    <button id="instructionbtn" onclick="openPopup()">How To Play</button>
+    <div class="popup" id="popup">
+    <h2>
+        Welcome to the Rat Race!
+    </h2>
+    <br>
+    <p>Here you get to experience all the dangers of being a rat while you head on down to the subway, also known as rat paradise. It should only take you two minutes to get there. Make sure you look out for cats and rat traps by jumping over them. Humans like to throw poison at us too so that could come from anywhere. Even getting in close proximity of these items can negatively impact your score. It is vital you dodge all of the items the best you can. If you can make it to the subway in time without a score greater than 500 you are ready for the real rat world!</p>
+    <br>
+    <h3>        Go ahead and click Start Game to get started.</h3>
+    <button id="closeinstructionbtn" onclick="closePopup()">Back to Game</button>
 </div>
-
-
-<button onclick="window.location.href='index.html';">
-    Start Game
-  </button>
-
-<audio id="music1" autoplay controls loop>
-    <source src="assets/cyberpunk-street-files/music/cyberpunk-street.wav" type="audio/wav"> 
-</audio> 
-
-    <script type="module" src="game.js"></script>
-
-
+</div>
+    <script src="game.js"></script>
+    <script src="startgame.js"></script>
 </body>
 </html>
