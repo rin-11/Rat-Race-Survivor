@@ -11,11 +11,13 @@
 <body>
 <div class="header">
     <h1>Rat Race Survivor</h1>
+    <div class= "rathome">
+        <img id='rathome' src="assets/Rat.png" alt="rat">
+    </div>
 </div>
 
-<button id="start" onclick="window.location.href='index.html';">Start Game</button>
-</div>
 <div class="instructions">
+    <button id="start" onclick="window.location.href='index.html';">Start Game</button>
     <button id="instructionbtn" onclick="openPopup()">How To Play</button>
     <div class="popup" id="popup">
     <h2>
@@ -25,9 +27,9 @@
     <p>Here you get to experience all the dangers of being a rat while you head on down to the subway, also known as rat paradise. It should only take you two minutes to get there. Make sure you look out for cats and rat traps by jumping over them. Humans like to throw poison at us too so that could come from anywhere. Even getting in close proximity of these items can negatively impact your score. It is vital you dodge all of the items the best you can. If you can make it to the subway in time without a score greater than 500 you are ready for the real rat world!</p>
     <br>
     <h3>        Go ahead and click Start Game to get started.</h3>
-    <button id="closeinstructionbtn" onclick="closePopup()">Back to Game</button>
+    <button id="closeinstructionbtn" onclick="closePopup()">Close Window</button>
 </div>
-</div>
+
     <script src="game.js"></script>
     <script src="startgame.js"></script>
 </body>

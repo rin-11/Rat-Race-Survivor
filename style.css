@@ -8,23 +8,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'SmackBoom';
 }
 
 
 button {
-    background-color:darkorange;
+    background-color:rgb(205, 202, 31);
+    font-family: 'SmackBoom';
 	border: 0;
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 	outline: none;
 	cursor: pointer;
-	font-size: 32px;
-	font-weight: 500;
+	font-size: 25px;
 	border-radius: 30px;
 	justify-content: center;
 	font-family:'SmackBoom' ;
-	color:gold ;
-    font-size: 50px;
 }
 
 
@@ -45,6 +44,15 @@ body {
     max-height: 100%;
     width: 500px;
     height: 375px;
+}
+#rathome {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    width: 500px;
+    height: 300px;
 }
 
 #Cat {
@@ -116,21 +124,11 @@ body {
     bottom: 3%;
     left: 67%;
 } 
-#music1 {
-    background-color: gold;
-    border-radius: 5px;
-    margin: 50px;
-    padding: 10px;
-    position: fixed;
-    bottom: 10%;
-    left: 1%;
-} 
 
 .instructions {
     font-family: 'SmackBoom';
     text-align: center;
     text-shadow: white;
-    color: rgb(89, 88, 81);
     font-weight: lighter;
     padding: 20px 20px;
     font-size: 20px;
@@ -139,20 +137,19 @@ body {
 #start {
 	padding: 10px 60px;
 	margin: 10px;
-	background-color:darkorange;
+	background-color:rgb(205, 202, 31);
 	border: 0;
 	outline: none;
 	cursor: pointer;
 	font-size: 32px;
 	font-weight: 500;
 	border-radius: 30px;
-	font-family: 'Bebas Neue', sans-serif;
 }
 
 #instructionbtn {
 	padding: 10px 60px;
 	margin: 10px;
-	background-color:darkorange;
+	background-color:rgb(205, 202, 31);
 	border: 0;
 	outline: none;
 	cursor: pointer;
@@ -161,19 +158,19 @@ body {
 	border-radius: 30px;
 	align-items:baseline;
 	justify-content: center;
-	font-family: 'Bebas Neue', sans-serif;
 }
 
 .popup {
 	width: 700px;
-	background-color: rgb(139, 94, 45);
+	background-color: rgb(82, 33, 58);
 	border-radius: 5px;
     justify-content: center;
 	position: absolute;
 	cursor: pointer;
-	transform: translate(-50%, -50%);
 	text-align: center;
-	padding: 0 30px 30px;
+    letter-spacing: 5px;
+    border-radius: 10%;
+	padding: 30px 30px 30px;
 	color:floralwhite ;
 	font-size: 20px;
 	font-weight: lighter;
@@ -181,18 +178,18 @@ body {
 	transition: transform 0.4s, top 0.4s;
 }
 .homescreen button {
-	position: absolute;
-	top: 13%;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	left: 35%;
-	width: 400px;
 	max-height: fit-content;
 }
 
 .open-popup{
 	visibility: visible;
+    justify-content: center;
+    left: 25%;
+    right: 25%;
+    position: absolute;
 }
 
 .popup h2 {
