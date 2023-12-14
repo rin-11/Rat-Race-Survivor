@@ -1,4 +1,4 @@
-# Project-1-Street-Rat-Runner
+# General Assembly Project-1-Street-Rat-Runner
 
 
 My game is a canvas style player running game.
