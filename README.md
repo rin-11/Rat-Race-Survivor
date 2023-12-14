@@ -1,5 +1,5 @@
-# General Assembly Project-1-Street-Rat-Runner
-
+# General Assembly Project One
+## Rat Race Survivor
 
 My game is a canvas style player running game.
 The user plays as a rat and has to use the left, right, and up key to get through the streets while avoiding coliding with cats, traps, and poison.
